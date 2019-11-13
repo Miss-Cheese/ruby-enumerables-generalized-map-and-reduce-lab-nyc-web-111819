@@ -16,4 +16,5 @@ def reduce(source_array, starting_point = nil)
     new_val = yield(new_val, source_array[index])
     index += 1
   end
+  new_val
 end
