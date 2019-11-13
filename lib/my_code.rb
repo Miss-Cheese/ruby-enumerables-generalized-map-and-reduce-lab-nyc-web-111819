@@ -1,7 +1,9 @@
-def mymap(array)
+def map(array)
   index = 0
-  yield(array[index])
-  index += 1
+  new_array = []
+  while index < array.count do
+    new_array << yield(array[index])
+    index += 1
+  end
+  new_array
 end
-
-map (array){ |n| -n}
